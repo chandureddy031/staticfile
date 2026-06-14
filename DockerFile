@@ -2,3 +2,5 @@ FROM nginx:latest
 
 COPY news_dashboard.html /usr/share/nginx/html/index.html
 #ok
+
+EXPOSE 80

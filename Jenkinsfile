@@ -3,11 +3,10 @@ pipeline {
 
     stages {
 
-        stage('Deploy to EC2') {
+        stage('Check Files') {
             steps {
-                sh '''
-                sudo cp news_dashboard.html /var/www/html/index.html
-                '''
+                sh 'pwd'
+                sh 'ls -la'
             }
         }
 

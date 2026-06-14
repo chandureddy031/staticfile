@@ -3,18 +3,24 @@ pipeline {
 
     stages {
 
-        stage('Check Files') {
+        stage('Build Image') {
             steps {
-                sh 'pwd'
-                sh 'ls -la'
-            }
-        }
-        stage('Check Files') {
-            steps {
-                sh 'pwd'
-                sh 'ls -la'
+                sh 'docker build -t news-dashboard .'
             }
         }
 
+        stage('Run Container') {
+            steps {
+                sh '''
+                docker stop news-dashboard || true
+                docker rm news-dashboard || true
+
+                docker run -d \
+                    --name news-dashboard \
+                    -p 8080:80 \
+                    news-dashboard
+                '''
+            }
+        }
     }
 }

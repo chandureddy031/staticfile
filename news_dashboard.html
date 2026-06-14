@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Live News Dashboard — June 14, 2026</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#0f1117;--card:#1a1d27;--border:#2a2d3a;--accent:#6c5ce7;--accent2:#00cec9;--accent3:#fd79a8;--accent4:#fdcb6e;--text:#e2e8f0;--muted:#8892a4;--red:#ff6b6b;--green:#00b894;--blue:#74b9ff}
+body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden}
+.header{text-align:center;padding:40px 20px 20px;background:linear-gradient(135deg,#1a1d27 0%,#0f1117 50%,#1a1d27 100%);border-bottom:1px solid var(--border)}
+.header h1{font-size:2.2rem;background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:8px}
+.header p{color:var(--muted);font-size:0.95rem}
+.timestamp{color:var(--accent2);font-size:0.85rem;margin-top:6px}
+nav{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;padding:20px;background:rgba(26,29,39,0.8);position:sticky;top:0;z-index:100;backdrop-filter:blur(10px);border-bottom:1px solid var(--border)}
+nav a{color:var(--muted);text-decoration:none;padding:8px 16px;border-radius:20px;font-size:0.85rem;border:1px solid var(--border);transition:all .3s}
+nav a:hover,nav a.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+.section{max-width:1200px;margin:0 auto;padding:30px 20px}
+.section-title{font-size:1.6rem;margin-bottom:20px;padding-bottom:10px;border-bottom:2px solid var(--accent);display:flex;align-items:center;gap:10px}
+.section-title .icon{font-size:1.4rem}
+.grid{display:grid;gap:16px}
+.grid-2{grid-template-columns:repeat(auto-fill,minmax(500px,1fr))}
+.grid-3{grid-template-columns:repeat(auto-fill,minmax(350px,1fr))}
+.card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px;transition:transform .2s,border-color .2s}
+.card:hover{transform:translateY(-2px);border-color:var(--accent)}
+.card .num{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;background:var(--accent);color:#fff;font-size:0.8rem;font-weight:700;margin-right:8px}
+.card h3{font-size:1.05rem;margin-bottom:8px;display:flex;align-items:center}
+.card p{color:var(--muted);font-size:0.9rem;margin-bottom:10px}
+.card .source{font-size:0.75rem;color:var(--accent2)}
+.card a{color:var(--accent2);text-decoration:none;font-size:0.85rem}
+.card a:hover{text-decoration:underline}
+.price-card{border-left:3px solid var(--red)}
+.price-card.up{border-left-color:var(--red)}
+.price-card.down{border-left-color:var(--green)}
+.price-card .price-change{font-size:1.1rem;font-weight:700;margin-top:4px}
+.price-card .price-change.up{color:var(--red)}
+.price-card .price-change.down{color:var(--green)}
+.tool-card{border-left:3px solid var(--accent)}
+.tool-card .stars{color:var(--accent4);font-size:0.85rem}
+.tool-card .lang{background:rgba(108,92,231,0.15);color:var(--accent);padding:2px 8px;border-radius:10px;font-size:0.75rem;display:inline-block;margin:4px 2px 0}
+.war-card{border-left:3px solid var(--orange,#e17055)}
+.war-badge{display:inline-block;padding:2px 10px;border-radius:10px;font-size:0.7rem;font-weight:600;text-transform:uppercase;margin-bottom:6px}
+.badge-critical{background:rgba(255,107,107,0.15);color:var(--red)}
+.badge-high{background:rgba(253,203,110,0.15);color:var(--accent4)}
+.badge-medium{background:rgba(116,185,255,0.15);color:var(--blue)}
+.badge-positive{background:rgba(0,184,148,0.15);color:var(--green)}
+.impact-box{background:rgba(108,92,231,0.08);border:1px solid rgba(108,92,231,0.2);border-radius:8px;padding:12px;margin-top:10px;font-size:0.85rem}
+.impact-box strong{color:var(--accent)}
+footer{text-align:center;padding:30px;color:var(--muted);font-size:0.8rem;border-top:1px solid var(--border);margin-top:40px}
+@media(max-width:600px){.grid-2,.grid-3{grid-template-columns:1fr}.header h1{font-size:1.5rem}nav a{font-size:0.75rem;padding:6px 10px}}
+</style>
+</head>
+<body>
+<div class="header">
+<h1>Live News Dashboard</h1>
+<p>Andhra Pradesh · India · World · Prices · Open Source Tools · War Updates</p>
+<div class="timestamp">Last updated: June 14, 2026 · 08:30 PM IST</div>
+</div>
+
+<nav>
+<a href="#andhra">Andhra Pradesh</a>
+<a href="#india">India</a>
+<a href="#intl">International</a>
+<a href="#prices">Price Tracker</a>
+<a href="#oss">Open Source Tools</a>
+<a href="#war">War Updates</a>
+</nav>
+
+<!-- ===== ANDHRA PRADESH ===== -->
+<div class="section" id="andhra">
+<h2 class="section-title"><span class="icon">🏛️</span> Andhra Pradesh — Top 10 News</h2>
+<div class="grid grid-2">
+
+<div class="card">
+<h3><span class="num">1</span>Vizag Steel Plant Tragedy — Death Toll Rises to 9</h3>
+<p>A devastating molten steel spill at Visakhapatnam Steel Plant killed at least 9 workers and injured several more. Workers allege staff shortages and poor raw material contributed to the accident. DNA tests are being conducted to identify victims. NHRC has sought a report from the Chief Secretary within two weeks.</p>
+<a href="https://www.thenewsminute.com/andhra-pradesh" target="_blank">The News Minute →</a>
+</div>
+
+<div class="card">
+<h3><span class="num">2</span>ED Raids in ₹195-Crore AP Liquor Transport Scam</h3>
+<p>The Enforcement Directorate arrested former APSBCL MD Donthireddy Vasudeva Reddy and key accused Raj Kesireddy during raids at five locations. Seized items include two Rolex watches, a premium SUV, and ₹9 lakh cash. The scam involved allegedly causing ₹195.33 crore wrongful loss to the state exchequer.</p>
+<a href="https://www.timesnownews.com/india/andhra-pradesh-liquor-scam-ed-raid-apsbcl-rolex-suv-cash-seizure-article-154580661" target="_blank">Times Now →</a>
+</div>
+
+<div class="card">
+<h3><span class="num">3</span>Jagan Seeks CBI Probe into Mega DSC Recruitment</h3>
+<p>YSRCP president YS Jagan Mohan Reddy demanded a CBI investigation into the Mega DSC teacher recruitment for ~16,000 posts, calling it a "multi-layered scam." He alleged an outsourced employee secured the top rank, raising question paper leak concerns. The government has denied irregularities.</p>
+<a href="https://tmv.in/article/ys-jagan-seeks-cbi-probe-into-mega-dsc-recruitment-alleges-large-scale-irregularities-date=2026-06-14" target="_blank">The Morning Voice →</a>
+</div>
+
+<div class="card">
+<h3><span class="num">4</span>NDA Wins All 4 Rajya Sabha Seats Unopposed</h3>
+<p>All four NDA candidates from Andhra Pradesh were elected to the Rajya Sabha unopposed, consolidating the coalition's political dominance in the state. TDP, Jana Sena, and BJP candidates secured their seats without contest.</p>
+<a href="https://www.thehindu.com/news/national/andhra-pradesh/" target="_blank">The Hindu →</a>
+</div>
+
+<div class="card">
+<h3><span class="num">5</span>CM Naidu Completes 2 Years, Vows Blockchain Land Records</h3>
+<p>CM Chandrababu Naidu marked two years of NDA governance, highlighting welfare and development achievements. He announced AP is the first Indian state to implement blockchain-based land records and vowed error-free Pattadar Passbooks for every farmer by 2027 with QR codes and security features.</p>
+<a href="https://telanganatoday.com/chandrababu-naidu-says-andhra-pradesh-overcame-challenges-to-deliver-governance-in-ndas-two-years" target="_blank">Telangana Today →</a>
+</div>
+
+<div class="card">
+<h3><span class="num">6</span>₹2,245-Crore Defence Cluster Approved for Udayagiri</h3>
+<p>A major defence cluster worth ₹2,245 crore will come up in Udayagiri, Andhra Pradesh. The project aims to boost India's defence manufacturing capabilities and create significant employment in the region.</p>
+<a href="https://www.newindianexpress.com/states/andhra-pradesh" target="_blank">New Indian Express →</a>
+</div>
+
+<div class="card">
+<h3><span class="num">7</span>APSDMA Forecasts Monsoon Rains Across State</h3>
+<p>The Andhra Pradesh State Disaster Management Authority forecast cloudy skies and moderate rainfall across the state under southwest monsoon influence. Light rain with lightning is expected in Srikakulam, Visakhapatnam, Anakapalli, Kakinada and Konaseema districts.</p>
+<a href="https://www.deccanchronicle.com/southern-states/andhra-pradesh/apsdma-forecasts-cloudy-skies-moderate-rainfall-across-ap-1963464" target="_blank">Deccan Chronicle →</a>
+</div>
+
+<div class="card">
+<h3><span class="num">8</span>3 Indian Seafarers Killed in US Strike Near Oman</h3>
+<p>A Vizag marine engineer was among three Indians killed when the US struck an oil tanker near Oman. Four other Andhra sailors remain stranded near Iran's coast urging the Indian government to rescue them. The incident has strained India-US relations.</p>
+<a href="https://www.thenewsminute.com/andhra-pradesh" target="_blank">The News Minute →</a>
+</div>
+
+<div class="card">
+<h3><span class="num">9</span>Pawan Kalyan on Regionalism Controversy</h3>
+<p>Deputy CM Pawan Kalyan's remarks that "excessive regionalism is like casteism" sparked a political storm across Telugu states. He also announced Jana Sena Party will contest the 2028 Telangana Assembly polls, expanding the party's footprint beyond AP.</p>
+<a href="https://www.thenewsminute.com/andhra-pradesh" target="_blank">The News Minute →</a>
+</div>
+
+<div class="card">
+<h3><span class="num">10</span>Health Dept to Deploy AI for Newborn Health Assessments</h3>
+<p>The Andhra Pradesh Health Department announced plans to deploy artificial intelligence for newborn health assessments, a pioneering move to improve infant healthcare outcomes across the state's government hospitals.</p>
+<a href="https://www.thehindu.com/news/national/andhra-pradesh/" target="_blank">The Hindu →</a>
+</div>
+
+</div></div>
+
+<!-- ===== INDIA ===== -->
+<div class="section" id="india">
+<h2 class="section-title"><span class="icon">🇮🇳</span> India — Top 10 News</h2>
+<div class="grid grid-2">
+
+<div class="card">
+<h3><span class="num">1</span>IAF AN-32 Crashes in Assam — 5 Killed</h3>
+<p>An Indian Air Force AN-32 transport aircraft split in two after crash-landing at Jorhat air base in Assam, killing 5 personnel including the pilot. The co-pilot survived. The aircraft was on a routine mission when the accident occurred during landing in poor weather conditions.</p>
+<a href="https://www.ndtv.com/" target="_blank">NDTV →</a>
+</div>
+
+<div class="card">
+<h3><span class="num">2</span>PM Modi Heads to France for G7 Summit, Trump Meeting</h3>
+<p>PM Modi left for a two-nation visit to France and Slovakia. He will attend the G7 summit and meet US President Trump on the sidelines. Key agenda items include trade, technology cooperation, and the Iran war's impact on energy security.</p>
+<a href="https://timesofindia.indiatimes.com/india" target="_blank">Times of India →</a>
+</div>
+
+<div class="card">
+<h3><span class="num">3</span>Jaishankar Calls Rubio Over Indian Sailor Deaths</h3>
+<p>EAM S Jaishankar spoke to US Secretary of State Marco Rubio, protesting attacks on vessels with Indian seafarers. Rubio stated violations of the Hormuz blockade "will not be tolerated" — signaling no exemption for Indian mariners. Three Indian sailors have been killed in US strikes in 6 days.</p>
+<a href="https://timesofindia.indiatimes.com/india/eam-calls-rubio-on-sailor-deaths-us-stands-by-attacks/articleshow/131712307.cms" target="_blank">Times of India →</a>
+</div>
+
+<div class="card">
+<h3><span class="num">4</span>Abhishek Banerjee's Home Raided at 3 AM</h3>
+<p>Police broke locks at TMC leader Abhishek Banerjee's Kalighat home at 3 AM searching for an aide in a land fraud case. The raid came hours after CID served a summons for alleged inflammatory election speech. Mamata Banerjee arrived at the scene, calling it "political vendetta."</p>
+<a href="https://www.telegraphindia.com/west-bengal/dawn-raid-on-abhishek-banerjee-police-break-into-tmc-leader-home-to-look-for-land-fraud-accused-prnt/cid/2165430" target="_blank">Telegraph India →</a>
+</div>
+
+<div class="card">
+<h3><span class="num">5</span>India Approves E100 Fuel Framework</h3>
+<p>Union Minister Nitin Gadkari signed regulations authorizing 100% ethanol (E100) as vehicular fuel, enabling ethanol-powered cars and motorcycles. Toyota and Hyundai are expected to launch E100-compatible vehicles. India imports 85% of crude oil; this move aims to cut dependence on fossil fuel imports.</p>
+<a href="https://www.thehindubusinessline.com/economy/policy/gadkari-clears-e100-fuel-framework-paving-way-for-ethanol-only-vehicles-in-india/article71098945.ece" target="_blank">Hindu Business Line →</a>
+</div>
+
+<div class="card">
+<h3><span class="num">6</span>Retail Inflation Rises to 3.93% in May</h3>
+<p>India's retail inflation accelerated to 3.93% in May — highest under the new CPI series — driven by food and fuel costs. Food inflation hit 16-month high of 4.78%. Tomato prices surged 48.43% YoY. Economists expect RBI to start rate hikes from October.</p>
+<a href="https://economictimes.indiatimes.com/news/economy/indicators/indias-retail-inflation-quickens-to-3-93-in-may-amid-high-food-fuel-prices/articleshow/131681454.cms" target="_blank">Economic Times →</a>
+</div>
+
+<div class="card">
+<h3><span class="num">7</span>Cancer Patient Dies as Nurse Injects Formalin at AIIMS Bhopal</h3>
+<p>A 3-year-old cancer patient died after a nurse mistakenly injected him with formalin (a preservative chemical) instead of a medication at AIIMS Bhopal. The incident has sparked outrage and calls for accountability in hospital administration.</p>
+<a href="https://www.ndtv.com/" target="_blank">NDTV →</a>
+</div>
+
+<div class="card">
+<h3><span class="num">8</span>Trinamool Crisis Deepens — Ex-Minister Quits, MP Meets Amit Shah</h3>
+<p>The Trinamool Congress faced a major crisis as an ex-minister quit the party and a sitting MP met BJP president Amit Shah. The political turmoil comes amid ED raids on TMC leaders and Abhishek Banerjee's police raid, signaling intensifying BJP-TMC confrontation in Bengal.</p>
+<a href="https://www.hindustantimes.com/" target="_blank">Hindustan Times →</a>
+</div>
+
+<div class="card">
+<h3><span class="num">9</span>IMD Confirms El Nino, Warns of Intensifying Conditions</h3>
+<p>The India Meteorological Department confirmed El Nino conditions and warned they will intensify through the monsoon season. The southwest monsoon rainfall forecast has been downgraded to 90% of the long-period average, raising concerns about crop output and food inflation.</p>
+<a href="https://www.indiatoday.in/" target="_blank">India Today →</a>
+</div>
+
+<div class="card">
+<h3><span class="num">10</span>Finland Minister Backs India on Russian Oil Purchase</h3>
+<p>Finland's foreign minister defended India's Russian oil purchases, stating they were "bought under the price cap." EAM Jaishankar had earlier delivered a sharp response on energy security and Western hypocrisy regarding sanctions.</p>
+<a href="https://www.ndtv.com/" target="_blank">NDTV →</a>
+</div>
+
+</div></div>
+
+<!-- ===== INTERNATIONAL ===== -->
+<div class="section" id="intl">
+<h2 class="section-title"><span class="icon">🌍</span> International — Top 10 News</h2>
+<div class="grid grid-2">
+
+<div class="card">
+<h3><span class="num">1</span>Trump Says US-Iran Deal to Be Signed Today</h3>
+<p>President Trump announced a US-Iran deal would be signed on Sunday (his 80th birthday), claiming the Strait of Hormuz would reopen immediately after. However, Iran's foreign ministry disputed the timing, saying "it will not be tomorrow" but could happen "in the coming days." Pakistan's PM confirmed a framework agreement exists.</p>
+<a href="https://www.aljazeera.com/news/liveblog/2026/6/13/iran-war-live-us-tehran-signal-peace-deal-within-reach-but-not-signed-yet" target="_blank">Al Jazeera →</a>
+</div>
+
+<div class="card">
+<h3><span class="num">2</span>Elon Musk Becomes World's First Trillionaire</h3>
+<p>Elon Musk became the world's first trillionaire as SpaceX completed its historic IPO at $135 per share, raising $75 billion — the world's biggest IPO. The company's valuation placed Musk ahead of all other billionaires, with SpaceX's rocket, satellite, and AI operations driving the unprecedented valuation.</p>
+<a href="https://www.bbc.com/news/world" target="_blank">BBC News →</a>
+</div>
+
+<div class="card">
+<h3><span class="num">3</span>EU Launches Membership Talks with Ukraine</h3>
+<p>The European Union agreed to officially launch membership negotiations with Ukraine next week, a historic step that signals Europe's commitment to Ukrainian integration despite the ongoing war with Russia.</p>
+<a href="https://abcnews.com/international" target="_blank">ABC News →</a>
+</div>
+
+<div class="card">
+<h3><span class="num">4</span>Switzerland Votes on Population Cap at 10 Million</h3>
+<p>Swiss voters decided on a referendum to cap the country's population at 10 million (current population ~9.1 million), driven by the right-wing Swiss People's Party's "sustainability initiative." Opponents called it a recipe for chaos over immigration.</p>
+<a href="https://www.bbc.com/news/world" target="_blank">BBC News →</a>
+</div>
+
+<div class="card">
+<h3><span class="num">5</span>World Bank Cuts Global Growth Forecast to 2.5%</h3>
+<p>The World Bank slashed its 2026 global growth forecast to 2.5% — the weakest since the Covid pandemic — citing the Middle East war's impact on energy prices, inflation, and borrowing costs. Growth could fall to 1.3% if disruption worsens.</p>
+<a href="https://www.10things.news/p/10-things-global-news-12th-june-2026" target="_blank">10 Things News →</a>
+</div>
+
+<div class="card">
+<h3><span class="num">6</span>Anthropic Suspends AI Tools Over US Govt Security Concerns</h3>
+<p>Anthropic suspended new AI tools due to US government security concerns, raising questions about the intersection of AI development and national security policy.</p>
+<a href="https://www.bbc.com/news/world" target="_blank">BBC News →</a>
+</div>
+
+<div class="card">
+<h3><span class="num">7</span>US Kills Venezuela Tren de Aragua Gang Leader in Airstrike</h3>
+<p>President Trump confirmed the US killed the leader of Venezuela's Tren de Aragua gang in a military airstrike, marking a significant escalation in US operations against transnational criminal organizations in the Western Hemisphere.</p>
+<a href="https://www.bbc.com/news/world" target="_blank">BBC News →</a>
+</div>
+
+<div class="card">
+<h3><span class="num">8</span>Paramount's $110 Billion Warner Bros Takeover Approved</h3>
+<p>The US Justice Department approved Paramount Skydance's acquisition of Warner Bros. Discovery in a $110 billion deal, creating one of the largest media conglomerates in history.</p>
+<a href="https://www.nbcnews.com/" target="_blank">NBC News →</a>
+</div>
+
+<div class="card">
+<h3><span class="num">9</span>Chinese Officials Arrest US Citizen on Espionage Charges</h3>
+<p>Chinese authorities arrested a US citizen on espionage charges, adding to tensions between Washington and Beijing at a time when both nations were attempting to stabilize relations.</p>
+<a href="https://abcnews.com/international" target="_blank">ABC News →</a>
+</div>
+
+<div class="card">
+<h3><span class="num">10</span>Super El Nino Raises Risk of Extreme Weather Globally</h3>
+<p>Scientists warned that a developing Super El Nino phenomenon raises the risk of extreme weather events worldwide, including droughts, floods, and temperature anomalies, potentially impacting agriculture and food security across continents.</p>
+<a href="https://www.10things.news/p/10-things-global-news-12th-june-2026" target="_blank">10 Things News →</a>
+</div>
+
+</div></div>
+
+<!-- ===== PRICE TRACKER ===== -->
+<div class="section" id="prices">
+<h2 class="section-title"><span class="icon">📊</span> Essential Commodity Price Tracker</h2>
+<p style="color:var(--muted);margin-bottom:20px;font-size:0.9rem">All India Average Retail Prices as of June 2026 · Source: Department of Consumer Affairs &amp; CPI Data</p>
+<div class="grid grid-3">
+
+<div class="card price-card up">
+<h3>🍅 Tomato</h3>
+<p>Summer heat devastated crops in southern states. Wholesale mandi prices reached ₹2,832/quintal — up 58.71% YoY. Retail prices at ₹39-69/kg depending on region.</p>
+<div class="price-change up">↑ +48.43% YoY</div>
+<div class="impact-box"><strong>Impact:</strong> Driving food inflation. Cost of vegetarian thalis up 5%, non-veg thalis up 7% in May. Prices expected to stay elevated through August.</div>
+<a href="https://agrospectrumindia.com/2026/06/12/tomato-prices-surge-nearly-59-year-on-year-as-indias-top-crop-markets-turn-volatile.html" target="_blank">Agro Spectrum →</a>
+</div>
+
+<div class="card price-card up">
+<h3>🥚 Eggs</h3>
+<p>Egg prices have risen due to higher fuel and feed costs squeezing the poultry value chain. Rising transportation costs are driving up feed expenses across the livestock sector.</p>
+<div class="price-change up">↑ ₹79.86/dozen (All India Avg)</div>
+<div class="impact-box"><strong>Impact:</strong> Fuel price surge from Iran war squeezing dairy and poultry value chains. CLFMA warns of frequent fluctuations in protein-rich food prices.</div>
+<a href="https://economictimes.indiatimes.com/small-biz/trade/exports/insights/iran-war-fuel-price-surge-squeezes-dairy-poultry-value-chains/articleshow/131602849.cms" target="_blank">Economic Times →</a>
+</div>
+
+<div class="card price-card up">
+<h3>🧅 Onion</h3>
+<p>Onion prices showing moderate increase after rabi production estimated 5% lower this year. Fresh arrivals have provided temporary relief but tightening supplies expected.</p>
+<div class="price-change up">↑ +6.68% YoY (Wholesale)</div>
+<div class="impact-box"><strong>Impact:</strong> Rabi harvest season ending. Retail at ₹26.65/kg. Prices may rise as cold storage stocks enter market at higher rates.</div>
+<a href="https://www.financialexpress.com/policy/economy/most-food-prices-stablenbspedible-oils-tomato-prices-spike/4261483/" target="_blank">Financial Express →</a>
+</div>
+
+<div class="card price-card down">
+<h3>🥔 Potato</h3>
+<p>Potato prices declined due to bumper rabi production and liquidation of cold-storage inventories. However, prices may rise as fresh harvests end.</p>
+<div class="price-change down">↓ -23.71% YoY</div>
+<div class="impact-box"><strong>Impact:</strong> Retail at ₹21.59/kg. Provides offset to tomato-driven inflation. Higher-priced cold storage stocks expected to enter market soon.</div>
+<a href="https://fcainfoweb.nic.in/" target="_blank">Price Monitoring Cell →</a>
+</div>
+
+<div class="card price-card up">
+<h3>🫒 Cooking Oil (Edible Oils)</h3>
+<p>All edible oil variants spiked due to higher global cooking oil prices. Mustard oil up 12%, soybean oil up 10% YoY. India imports 57% of edible oils annually.</p>
+<div class="price-change up">↑ +8-12% YoY</div>
+<div class="impact-box"><strong>Impact:</strong> Mustard oil ₹191/L, soybean oil ₹161/L. Global supply disruptions from West Asia conflict. Imports from Indonesia, Malaysia, Russia, Ukraine, Argentina.</div>
+<a href="https://www.financialexpress.com/policy/economy/most-food-prices-stablenbspedible-oils-tomato-prices-spike/4261483/" target="_blank">Financial Express →</a>
+</div>
+
+<div class="card price-card up">
+<h3>🔥 LPG / Cooking Gas</h3>
+<p>LPG prices increased 7% YoY, adding to kitchen inflation. Combined with edible oil and tomato price rises, significantly pushed up cost of home-cooked meals.</p>
+<div class="price-change up">↑ +7% YoY</div>
+<div class="impact-box"><strong>Impact:</strong> Non-veg thali cost up 7% in May. FMCG companies planning calibrated price hikes due to rising input costs and geopolitical disruptions.</div>
+<a href="https://www.businesstoday.in/latest/economy/story/tomatoes-push-up-thali-costs-in-may-by-7-will-onions-and-potatoes-be-next-534955-2026-06-04" target="_blank">Business Today →</a>
+</div>
+
+<div class="card price-card up">
+<h3>🍚 Rice & Wheat</h3>
+<p>Rice and wheat prices remain stable due to record government buffer stocks, providing relief against other rising food prices.</p>
+<div class="price-change down">→ Stable</div>
+<div class="impact-box"><strong>Impact:</strong> Government buffer stocks meeting demand. Sugar up 2.2% to ₹46.92/kg. Export ban on sugar imposed to improve domestic supplies.</div>
+<a href="https://www.financialexpress.com/policy/economy/most-food-prices-stablenbspedible-oils-tomato-prices-spike/4261483/" target="_blank">Financial Express →</a>
+</div>
+
+<div class="card price-card up">
+<h3>🥛 Milk & Dairy</h3>
+<p>Dairy sector under pressure from rising fuel and feed costs. Transportation costs driving up input costs, squeezing farmers' margins.</p>
+<div class="price-change up">↑ Under Pressure</div>
+<div class="impact-box"><strong>Impact:</strong> Higher diesel prices increasing cost of moving feed ingredients and finished products. Concerns about affordability of essential protein-rich foods.</div>
+<a href="https://economictimes.indiatimes.com/small-biz/trade/exports/insights/iran-war-fuel-price-surge-squeezes-dairy-poultry-value-chains/articleshow/131602849.cms" target="_blank">Economic Times →</a>
+</div>
+
+<div class="card price-card up">
+<h3>🍗 Chicken / Broiler</h3>
+<p>Broiler prices increased 2% due to higher bird mortality from intense summer heat, tightening supply. Broiler constitutes ~50% of non-veg thali cost.</p>
+<div class="price-change up">↑ +2% YoY</div>
+<div class="impact-box"><strong>Impact:</strong> Summer heat caused bird mortality. Combined with fuel costs, non-veg thali became 7% more expensive in May 2026.</div>
+<a href="https://insights.tridge.com/speaker-product-news-reports/KJLyFXpzJzgKuB1Gqsm5QUKHGgR43AVdqLSMGT7yEzj4wYCPYF6CTfg6" target="_blank">Tridge Insights →</a>
+</div>
+
+<div class="card price-card up">
+<h3>🍽️ Overall Food Inflation</h3>
+<p>India's food inflation spiked to 4.78% in May — a 16-month high. Driven by tomato (+48%), ginger (+32%), and edible oils. Below-normal monsoon expected to worsen prices.</p>
+<div class="price-change up">↑ 4.78% (May 2026)</div>
+<div class="impact-box"><strong>Impact:</strong> El Nino conditions expected to intensify. IMD forecasts 90% monsoon rainfall. Rating agencies expect CPI inflation to hit 4.5% in June.</div>
+<a href="https://www.financialexpress.com/policy/economy/food-inflation-spikes-to-4-78-in-may/4266088/" target="_blank">Financial Express →</a>
+</div>
+
+</div></div>
+
+<!-- ===== OPEN SOURCE TOOLS ===== -->
+<div class="section" id="oss">
+<h2 class="section-title"><span class="icon">🛠️</span> Top 10 Open Source Tools for Design Engineers & AI Agent Experts</h2>
+<div class="grid grid-2">
+
+<div class="card tool-card">
+<h3><span class="num">1</span>text-to-cad</h3>
+<p>A library of agent skills for generating, inspecting, sourcing, slicing, and handing off CAD and robot-description artifacts. Supports STEP, STL, DXF, GLB, URDF export. Works with Claude Code, Codex, and other coding agents.</p>
+<div><span class="lang">JavaScript</span><span class="lang">Python</span><span class="lang">MIT</span></div>
+<div class="stars">⭐ 5,979 stars · 715 forks</div>
+<a href="https://github.com/earthtojake/text-to-cad" target="_blank">GitHub →</a>
+</div>
+
+<div class="card tool-card">
+<h3><span class="num">2</span>Kerf — Multi-Discipline CAD</h3>
+<p>Chat-driven, multi-discipline CAD across 22 engineering domains — mechanical, electronics, BIM, aerospace, silicon, civil, piping, mold, packaging. Uses JSCAD, OpenCascade B-rep, tscircuit. Browser-native, MIT licensed.</p>
+<div><span class="lang">TypeScript</span><span class="lang">Python</span><span class="lang">MIT</span></div>
+<div class="stars">⭐ New & Rising</div>
+<a href="https://github.com/kerf-sh/kerf" target="_blank">GitHub →</a>
+</div>
+
+<div class="card tool-card">
+<h3><span class="num">3</span>CAD/CAE Copilot (aieng)</h3>
+<p>AI-native CAD/CAE workbench for AI agents. Text-to-CAD with real build123d/OpenCASCADE geometry, editable parameters, stable topology pointers, deterministic critique, and MCP server tools. Exports STEP/STL/GLB.</p>
+<div><span class="lang">Python</span><span class="lang">React</span><span class="lang">MCP</span></div>
+<div class="stars">⭐ Active Development</div>
+<a href="https://github.com/armpro24-blip/cad-cae-copilot" target="_blank">GitHub →</a>
+</div>
+
+<div class="card tool-card">
+<h3><span class="num">4</span>Open Design</h3>
+<p>Local-first, open-source Claude Design alternative. Native desktop app with 259+ skills, 142+ design systems. Generates web, desktop, mobile prototypes, dashboards, decks, images, video, HyperFrames. Runs on 22+ CLIs.</p>
+<div><span class="lang">TypeScript</span><span class="lang">Apache-2.0</span></div>
+<div class="stars">⭐ 261 plugins · 150+ design systems</div>
+<a href="https://github.com/nexu-io/open-design" target="_blank">GitHub →</a>
+</div>
+
+<div class="card tool-card">
+<h3><span class="num">5</span>Webwright (Microsoft)</h3>
+<p>Gives LLM a terminal to launch browser sessions for web tasks. Captures screenshots only when needed. Python-based, pluggable backends (OpenAI, Anthropic, OpenRouter). 86.7% on Online-Mind2Web benchmark.</p>
+<div><span class="lang">Python</span><span class="lang">MIT</span></div>
+<div class="stars">⭐ 5,408 stars · Microsoft</div>
+<a href="https://github.com/microsoft/Webwright" target="_blank">GitHub →</a>
+</div>
+
+<div class="card tool-card">
+<h3><span class="num">6</span>HyperAgents (Meta/Facebook Research)</h3>
+<p>Self-referential self-improving agents that can optimize for any computable task. Research framework from Facebook AI Research for building agents that improve themselves through meta-learning.</p>
+<div><span class="lang">Python</span><span class="lang">Research</span></div>
+<div class="stars">⭐ 2,575 stars · Meta Research</div>
+<a href="https://github.com/facebookresearch/HyperAgents" target="_blank">GitHub →</a>
+</div>
+
+<div class="card tool-card">
+<h3><span class="num">7</span>OmniAgent — Self-Evolving Agent Framework</h3>
+<p>Open-source self-evolving Agent framework with full-dimensional self-evolution (Skill, Context, BrainModel). Features Hyper-Harness for safe execution and Deep Reflexion for failure-to-insight conversion. Supports multi-model backends.</p>
+<div><span class="lang">Python</span><span class="lang">Self-Evolving</span></div>
+<div class="stars">⭐ 1,831 stars</div>
+<a href="https://github.com/YeQing17-2026/OmniAgent" target="_blank">GitHub →</a>
+</div>
+
+<div class="card tool-card">
+<h3><span class="num">8</span>Reframe — AI-Native Design Engine</h3>
+<p>Open-source design tool where agents write UI and humans direct it. Works on HTML + INode AST. Exports to HTML, React, SVG, PNG, PDF, Lottie, MP4. 60+ brand-grade DESIGN.md systems. AGPL-3.0 licensed.</p>
+<div><span class="lang">TypeScript</span><span class="lang">AGPL-3.0</span></div>
+<div class="stars">⭐ Figma Alternative</div>
+<a href="https://github.com/ilya-makarov-dev/Reframe" target="_blank">GitHub →</a>
+</div>
+
+<div class="card tool-card">
+<h3><span class="num">9</span>Forgent3D</h3>
+<p>Local AI CAD companion for building, previewing, and iterating parametric 3D models with coding agents. Three.js viewer, MJCF physics, assembly support, MCP tooling. Desktop app with live preview.</p>
+<div><span class="lang">Python</span><span class="lang">MIT</span></div>
+<div class="stars">⭐ 202 stars</div>
+<a href="https://github.com/forgent3d/forgent3d" target="_blank">GitHub →</a>
+</div>
+
+<div class="card tool-card">
+<h3><span class="num">10</span>GitAgent — Universal Git-Native Agent</h3>
+<p>A universal git-native AI agent framework. Agent lives inside a git repo — identity, rules, memory, tools, skills all version-controlled. Multi-model support, voice mode, declarative tools. The "agents as repos" paradigm.</p>
+<div><span class="lang">TypeScript</span><span class="lang">MIT</span></div>
+<div class="stars">⭐ 536 stars</div>
+<a href="https://github.com/open-gitagent/gitagent" target="_blank">GitHub →</a>
+</div>
+
+</div></div>
+
+<!-- ===== WAR UPDATES ===== -->
+<div class="section" id="war">
+<h2 class="section-title"><span class="icon">⚔️</span> War Updates — US-Iran & Russia-Ukraine</h2>
+
+<h3 style="color:var(--accent3);margin:20px 0 15px;font-size:1.2rem">🔴 US-Iran Conflict</h3>
+<div class="grid grid-2">
+
+<div class="card war-card">
+<span class="war-badge badge-critical">CRITICAL</span>
+<h3>1. Trump Claims Deal to Be Signed Sunday — Iran Disputes Timing</h3>
+<p>Trump announced on Truth Social: "The Deal is scheduled to get signed tomorrow, and immediately after it is signed, the Hormuz Strait is OPEN TO ALL." However, Iran's Foreign Ministry spokesman said "it will not be tomorrow" but could happen "in the coming days." Pakistan's PM Sharif confirmed a framework exists and said Islamabad was preparing for electronic signing. The draft includes: ceasefire extension, Hormuz reopening, sanctions relief, and 60-day nuclear talks.</p>
+<div class="impact-box"><strong>Status:</strong> Ceasefire in place since April 7 but sporadic violence continues. If signed, this would be the most significant de-escalation since the war began Feb 28.</div>
+<a href="https://www.aljazeera.com/news/liveblog/2026/6/13/iran-war-live-us-tehran-signal-peace-deal-within-reach-but-not-signed-yet" target="_blank">Al Jazeera Live →</a>
+</div>
+
+<div class="card war-card">
+<span class="war-badge badge-critical">CRITICAL</span>
+<h3>2. US-Iran Draft Deal Terms Revealed</h3>
+<p>Per Reuters, the draft MOU includes: US releasing billions in frozen Iranian assets, waiving oil export sanctions, Iran reopening Strait of Hormuz, 60-day negotiation on nuclear programme, destruction of enriched uranium stockpile, possible war reparations for Iran, and removal of US demands on missile programme.</p>
+<div class="impact-box"><strong>Key Sticking Point:</strong> Iran insists on controlling Hormuz and collecting tolls. US says Iranian control is "unacceptable." Nuclear issue remains deeply contentious.</div>
+<a href="https://gulfnews.com/world/mena/iran-us-deal-edges-closer-as-trump-signals-sunday-signing-and-hormuz-reopening-1.500573653" target="_blank">Gulf News →</a>
+</div>
+
+<div class="card war-card">
+<span class="war-badge badge-high">HIGH</span>
+<h3>3. Three Indian Sailors Killed in US Strikes</h3>
+<p>US forces fired upon three vessels with Indian seafarers in 6 days. EAM Jaishankar called Secretary Rubio, stating "Such lethal actions against commercial shipping are not justified." Rubio responded that violations of the blockade "will not be tolerated" — no exemption for Indian mariners. India summoned US envoy twice.</p>
+<div class="impact-box"><strong>Diplomatic Impact:</strong> Major strain on India-US relations. India continues to press for safe passage of commercial shipping. MEA denied reports of a fourth vessel attack.</div>
+<a href="https://timesofindia.indiatimes.com/india/eam-calls-rubio-on-sailor-deaths-us-stands-by-attacks/articleshow/131712307.cms" target="_blank">Times of India →</a>
+</div>
+
+<div class="card war-card">
+<span class="war-badge badge-high">HIGH</span>
+<h3>4. Iran Launches Attack Drones at Commercial Ships</h3>
+<p>US Central Command reported Iran launched "multiple one-way attack drones" attempting to strike commercial ships in the Strait of Hormuz. US forces shot down the drones. The blockade continues with the US insisting commercial traffic remains open while Iran claims the strait is closed.</p>
+<div class="impact-box"><strong>Energy Impact:</strong> Hormuz carries 20% of world oil. Oil prices volatile. JPMorgan CEO warns of oil shocks and higher interest rates.</div>
+<a href="https://www.euronews.com/2026/06/12/iran-says-deal-with-us-closer-than-ever-as-trump-warns-tehran-to-get-act-together" target="_blank">Euronews →</a>
+</div>
+
+<div class="card war-card">
+<span class="war-badge badge-medium">MEDIUM</span>
+<h3>5. Israel Strikes Lebanon as US-Iran Deal Nears</h3>
+<p>Israel launched attacks across southern Lebanon killing at least 5 people while the US-Iran deal progresses. Israel also carried out airstrikes in Gaza. PM Netanyahu stated Israel was "not a party" to the Iran deal but was in "full agreement" with Trump that Iran must not have nuclear weapons.</p>
+<div class="impact-box"><strong>Regional Dimension:</strong> The draft deal reportedly includes ending the war on all fronts including Lebanon. Israel's continued strikes complicate the peace process.</div>
+<a href="https://www.hindustantimes.com/" target="_blank">Hindustan Times →</a>
+</div>
+
+<div class="card war-card">
+<span class="war-badge badge-medium">MEDIUM</span>
+<h3>6. Trump Cancels Planned Strikes on Iran</h3>
+<p>In a dramatic reversal, Trump cancelled scheduled military strikes on Iran just hours after threatening to hit Iran "VERY HARD" and seize its oil infrastructure. He claimed talks were "brought to the highest level of Iranian leadership and approved." The whipsaw approach has characterized Trump's handling of the war since February.</p>
+<div class="impact-box"><strong>Pattern:</strong> This is the latest in a series of mixed signals. Trump repeatedly claimed a deal was imminent, yet none has materialized until now. Markets rallied on the news.</div>
+<a href="https://www.insurancejournal.com/news/international/2026/06/12/873521.htm" target="_blank">Insurance Journal →</a>
+</div>
+
+<div class="card war-card">
+<span class="war-badge badge-medium">MEDIUM</span>
+<h3>7. War Began Feb 28 — US-Israel Joint Attack on Iran</h3>
+<p>The war began on February 28 with joint US-Israeli strikes on Iran that killed Supreme Leader Ayatollah Ali Khamenei. His successor, Mojtaba Khamenei, is now Iran's supreme leader. A fragile ceasefire has been in place since April 7, but it nearly collapsed this week with tit-for-tat strikes.</p>
+<div class="impact-box"><strong>Timeline:</strong> Feb 28: War begins → April 7: Ceasefire → June 10-12: Exchange of fire → June 13: Deal framework reportedly finalized → June 14: Trump says signing today.</div>
+<a href="https://www.military.com/us-and-iran-are-close-to-a-deal-to-end-their-war-officials-say" target="_blank">Military.com →</a>
+</div>
+
+<div class="card war-card">
+<span class="war-badge badge-positive">DEVELOPING</span>
+<h3>8. Pakistan Mediates — Sharif Says Deal "Closer Than Ever"</h3>
+<p>Pakistan's PM Shehbaz Sharif played a key mediating role, saying the deal is "closer than ever before" and that Islamabad was preparing for electronic signing. The deal was largely brokered by Pakistan's army chief Field Marshal Asim Munir, with backing from Saudi Arabia, Turkey, Egypt, and Qatar.</p>
+<div class="impact-box"><strong>Mediators:</strong> Pakistan (lead), Qatar, Saudi Arabia, Turkey, Egypt. G7 nations may assist with Hormuz demining post-deal.</div>
+<a href="https://www.gmanetwork.com/news/topstories/world/991373/trump-says-deal-to-end-war-will-be-signed-on-sunday-iran-questions-timing/story/" target="_blank">GMA News →</a>
+</div>
+
+<div class="card war-card">
+<span class="war-badge badge-high">HIGH</span>
+<h3>9. Oil Prices & Global Economic Impact</h3>
+<p>The war has virtually shut down oil and gas shipments from the Persian Gulf. JPMorgan CEO Jamie Dimon warned of oil shocks, sticky inflation, and higher interest rates. World Bank cut global growth to 2.5%. US stock markets rallied on deal hopes, erasing war-driven losses.</p>
+<div class="impact-box"><strong>India Impact:</strong> Higher fuel prices squeezing dairy/poultry chains. Retail inflation at 3.93%. RBI expected to hike rates from October. India imports 85% of crude.</div>
+<a href="https://www.10things.news/p/10-things-global-news-12th-june-2026" target="_blank">10 Things News →</a>
+</div>
+
+<div class="card war-card">
+<span class="war-badge badge-positive">POSITIVE</span>
+<h3>10. Is the War Ending? Analysis</h3>
+<p><strong>Signs of hope:</strong> Both sides project optimism. Draft MOU reportedly finalized. Pakistan mediating. Ceasefire extension planned. Hormuz reopening on the table. Nuclear talks to follow. <strong>Reasons for caution:</strong> Iran disputes signing timeline. Hardliners on both sides oppose deal. Hormuz control remains unresolved. Nuclear issue deferred, not solved. Israel continues strikes in Lebanon/Gaza.</p>
+<div class="impact-box"><strong>Verdict:</strong> A framework deal appears imminent, but a full resolution of the US-Iran conflict — especially on nuclear issues and Hormuz control — remains months away. The immediate war may end, but the underlying tensions persist.</div>
+</div>
+
+</div>
+
+<h3 style="color:var(--accent4);margin:30px 0 15px;font-size:1.2rem">🔵 Russia-Ukraine War (Day 1,572)</h3>
+<div class="grid grid-2">
+
+<div class="card war-card">
+<span class="war-badge badge-critical">CRITICAL</span>
+<h3>11. Ukraine Strikes Crimean Titanium Plant</h3>
+<p>Ukrainian forces struck the Armiansk titanium plant in occupied Crimea — described as the largest titanium facility in Eastern Europe. The plant produces titanium dioxide and chemical feedstocks usable in explosives and rocket fuel. Reports indicate 23 strikes hit the facility, causing fires and halting production.</p>
+<a href="https://en.defence-ua.com/news/ukraine_claims_strike_on_crimean_titanium_giant_largest_in_eastern_europe_video-18807.html" target="_blank">Defence Express →</a>
+</div>
+
+<div class="card war-card">
+<span class="war-badge badge-critical">CRITICAL</span>
+<h3>12. Ukraine Destroys 50 Military Vehicles on Crimea Bridge</h3>
+<p>Ukraine's 1st Separate Assault Regiment Da Vinci destroyed 50 Russian military vehicles loaded with ammunition and fuel on the Armiansk bridge. The attack "completely paralysed" a key logistics route. Commander Brovdi stated Ukraine can "fully cut off Russia's access to Crimea in the near future."</p>
+<a href="https://www.independent.co.uk/news/world/europe/ukraine-russia-war-live-putin-zelensky-crimea-bridge-news-b2994432.html" target="_blank">The Independent →</a>
+</div>
+
+<div class="card war-card">
+<span class="war-badge badge-high">HIGH</span>
+<h3>13. Fuel Crisis in Russian-Occupied Crimea</h3>
+<p>Petrol stations in Crimea have run dry — the worst fuel crisis since Russia's 2014 annexation. Sevastopol imposed 20L/week civilian ration (down from 20L/day). Bus services cut 40%. 1-3km queues at the 11 open stations. R-280 highway traffic cut 71% in two weeks by Ukrainian drone strikes.</p>
+<a href="https://easternherald.com/2026/06/14/ukraine-crimea-drone-strikes-r-280-novorossiya-highway-armiansk-bridge-sevastopol-fuel-rationing-brovdi-madyar-june-14-2026/" target="_blank">Eastern Herald →</a>
+</div>
+
+<div class="card war-card">
+<span class="war-badge badge-high">HIGH</span>
+<h3>14. Ukraine Reclaimed More Territory Than Lost in May</h3>
+<p>Ukraine reclaimed more territory than Russia captured in May, reversing Moscow's monthly net gains trend. Ukraine estimated net gains of ~120 sq km. In the first 5 months of 2026, Ukraine reclaimed 600 sq km total. Strategy focuses on disrupting Russian supply lines.</p>
+<a href="https://www.aljazeera.com/news/2026/6/12/ukraine-reclaims-territory-in-may-as-it-doubles-strikes-on-russian-logistic" target="_blank">Al Jazeera →</a>
+</div>
+
+<div class="card war-card">
+<span class="war-badge badge-high">HIGH</span>
+<h3>15. AI "Terminator Drones" Used in Combat for First Time</h3>
+<p>Ukraine used AI-powered "terminator" drones to kill Russian soldiers without human oversight for the first time. The quadcopters fly to the front line, engage an AI model that autonomously searches and intercepts targets. "Everything it sees will be killed," said the developer. The test killed two soldiers and a truck.</p>
+<a href="https://www.independent.co.uk/news/world/europe/ukraine-russia-war-live-putin-zelensky-crimea-bridge-news-b2994432.html" target="_blank">The Independent →</a>
+</div>
+
+<div class="card war-card">
+<span class="war-badge badge-medium">MEDIUM</span>
+<h3>16. Ukraine Strikes St. Petersburg During Economic Forum</h3>
+<p>Ukrainian forces struck the Kronstadt Naval Base, oil depots, and military arsenals near St. Petersburg during the SPIEF economic forum. Governor Beglov told residents to stay indoors — reportedly the first such order since Feb 2022. Demonstrates Russia cannot defend major cities during international events.</p>
+<a href="https://understandingwar.org/research/russia-ukraine/russian-offensive-campaign-assessment-june-6-2026/" target="_blank">ISW →</a>
+</div>
+
+<div class="card war-card">
+<span class="war-badge badge-medium">MEDIUM</span>
+<h3>17. Russia's Kostyantynivka Offensive — Tactical Gains</h3>
+<p>Russian forces made tactical gains in Kostyantynivka — assessed as Russia's main effort for the Spring-Summer 2026 offensive. Two Russian tactical groups advanced from opposite directions, achieving what appears to be a tactical breakthrough in western parts of the city. Ukrainian forces cleared some infiltrators.</p>
+<a href="https://understandingwar.org/research/russia-ukraine/russian-offensive-campaign-assessment-june-10-2026/" target="_blank">ISW →</a>
+</div>
+
+<div class="card war-card">
+<span class="war-badge badge-medium">MEDIUM</span>
+<h3>18. Russia Launches 9,293+ Kamikaze Drones in One Day</h3>
+<p>Russia deployed 9,293 kamikaze drones and conducted 3,248 attacks on Ukrainian positions in a single day. Ukrainian forces intercepted 90% of all Russian drones and missiles in May, but still need additional air defense funding. Total Russian losses: ~1,380,120 troops since Feb 2022.</p>
+<a href="https://empr.media/news/war/russia-ukraine-war-updates-key-developments-as-of-june-11-2026/" target="_blank">EMPR →</a>
+</div>
+
+<div class="card war-card">
+<span class="war-badge badge-medium">MEDIUM</span>
+<h3>19. Ukraine Seeks $20B More Military Funding</h3>
+<p>Ukraine will ask allies for an additional $20 billion in military funding at a meeting next week to cement its battlefield advantage. Russia's advances have slowed to near-halt as Ukrainian drone strikes disrupt supplies. Ukraine's unmanned systems forces recruited 14,500 personnel this year.</p>
+<a href="https://www.independent.co.uk/news/world/europe/ukraine-russia-war-live-putin-zelensky-crimea-bridge-news-b2994432.html" target="_blank">The Independent →</a>
+</div>
+
+<div class="card war-card">
+<span class="war-badge badge-high">HIGH</span>
+<h3>20. Is This War Ending? Analysis</h3>
+<p><strong>Ukraine-Russia:</strong> No ceasefire in sight. Russia continues offensive operations at Kostyantynivka. Ukraine's drone strategy is effective but war of attrition continues. Russia losing ~1,300 troops/day but still launching 9,000+ drones daily. <strong>Key trend:</strong> Ukraine gaining ground through logistics disruption while Russia's battlefield performance dwindles. A negotiated settlement remains distant as Putin refuses to deviate from original war aims.</p>
+<div class="impact-box"><strong>Bottom Line:</strong> Unlike US-Iran, there are no active peace talks between Russia and Ukraine. The war has surpassed 1,570 days with no end in visible sight, though the momentum appears to be slowly shifting in Ukraine's favor.</div>
+</div>
+
+</div></div>
+
+<footer>
+<p>Dashboard generated on June 14, 2026 · Data sourced from NDTV, The Hindu, Times of India, Al Jazeera, BBC, ISW, Reuters, Economic Times, Financial Express, and open source repositories</p>
+<p style="margin-top:6px">All news links lead to original sources. Prices are All India averages from Department of Consumer Affairs.</p>
+</footer>
+
+<script>
+// Smooth scroll for nav links
+document.querySelectorAll('nav a').forEach(a=>{
+  a.addEventListener('click',e=>{
+    e.preventDefault();
+    const t=document.querySelector(a.getAttribute('href'));
+    if(t)t.scrollIntoView({behavior:'smooth',block:'start'});
+  });
+});
+
+// Active nav highlight on scroll
+const sections=document.querySelectorAll('.section');
+const navLinks=document.querySelectorAll('nav a');
+window.addEventListener('scroll',()=>{
+  let current='';
+  sections.forEach(s=>{
+    const top=s.offsetTop-120;
+    if(pageYOffset>=top) current=s.getAttribute('id');
+  });
+  navLinks.forEach(a=>{
+    a.classList.remove('active');
+    if(a.getAttribute('href')==='#'+current) a.classList.add('active');
+  });
+});
+</script>
+</body>
+</html>
